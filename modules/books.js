@@ -15,13 +15,14 @@ class Book {
     const newBook = new Book(book.title, book.author);
     booksData.push(newBook);
     storeData(booksData);
-    window.location.reload();
+    // window.location.reload();
   }
 
   static removeBook(book) {
     let currentBooksData = booksData;
     currentBooksData = booksData.filter((e) => e.id !== book.id);
     storeData(currentBooksData);
+    window.location.reload();
   }
 }
 
@@ -68,5 +69,7 @@ export const displayToPage = () => {
 addButton.addEventListener('click', () => {
   const newBook = new Book(titleInput.value, autherInput.value);
   Book.addBook(newBook);
-  displayToPage(newBook);
+  // displayToPage(newBook);
+  titleInput.value = '';
+  autherInput.value = '';
 });
