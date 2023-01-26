@@ -13,6 +13,7 @@ export const bookListHandler = () => {
   linForBookList.style.color = 'blue';
   linkForAddSection.style.color = 'black';
   linkForContInfo.style.color = 'black';
+  window.location.reload();
 };
 
 export const addSectionHandler = () => {
